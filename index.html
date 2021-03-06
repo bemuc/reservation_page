@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+           /* padding: 0px;
+            margin: 0px;*/
+            background-color: black;
+        }
+        #forome{
+            display: flex;
+            justify-content: center;
+        }
+        h6,h1,label{
+            color: white;
+            font-family: 'Raleway', sans-serif;
+            height: 20px;
+            font-weight:900;
+            font-size: medium;
+        }
+        #votre{
+           /* display: flex;
+            flex-direction: column;*/
+        }
+        #notre{
+           /* display: flex;
+            flex-direction: column;*/
+        }
+        #in{
+            width: 400px;
+            border-radius: 3px;
+            height: 25px;
+            border-style:none;
+        }
+        #uno{
+           /* border: 3px solid blue;*/
+            padding-right: 100px;
+            padding-left: 100px;
+        }
+        #dose{
+          /*  border: 3px solid red;*/
+            padding-right: 100px;
+            padding-left: 100px;
+        }
+        #hed{
+            display: flex;
+            justify-content: center;
+        }
+        #sub
+        {
+            display: flex;
+            justify-content: center;
+        }
+        #puton{
+            width: 200px;
+            height: 50px;
+            background-color: white;
+            color: black;
+            font-family:'Raleway', sans-serif;
+            font-size: 30px;
+            font-weight: bold;
+            
+        }
+        span{
+            color: red;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+    <script>
+function validateForm() {
+  var x = document.forms["contact_form"]["nom"].value;
+  var validMail = mail.checkvalidity();
+  if(validMail == false)
+  {
+    alert("email not valid");
+  }
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+} 
+
+
+
+
+
+
+
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap" rel="stylesheet"> 
+    <title>formulaire</title>
+</head>
+<body>
+    <header>
+        <div id="hed">
+        <h1>Votre Safari Africain de reve commence ici</h1>
+    </div>
+    </header>
+    
+    <hr>
+    <form action="" method="post" name="contact_form" onsubmit="return validateForm()">
+        <div  id="forome">
+        <div id="uno">
+            <h6>votre nom complet <span id="star">*</span></h6>
+            <input type="text" id="in" name="nom" required>
+            <h6>N de telephone <span id="star">*</span></h6>
+            <input type="text" id="in" name="num_telephone" required>
+            <h6>Date d'arrivee <span id="star">*</span></h6>
+            <input type="text" id="in" name="date_arriver" required>
+            <h6>vos dates sont-elles flexibles? <span id="star">*</span></h6>
+            <input type="checkbox" name="date1"><label for="date1">oui</label><br>
+            <input type="checkbox" name="date2"><label for="date2">Non</label><br>
+            <h6>Nombres d'adultes <span id="star">*</span></h6>
+            <input type="text" id="in" name="nbre_adultes" required>
+            <h6>votre plan safari <span id="star">*</span></h6>
+            <div id="votre">
+            <input type="checkbox" name="saf1"><label for="saf1">Lodge de luxe / Safari dans un camp de tentes</label><br>
+            <input type="checkbox" name="saf2"><label for="saf2">Safari en compagnie prive</label><br>
+            <input type="checkbox" name="saf3"><label for="saf3">Visite du groupe budgetaire</label><br>
+            <input type="checkbox" name="saf4"><label for="saf4">Tour de lune de miel</label><br>
+            <input type="checkbox" name="saf5"><label for="saf5">Safari culturel et a pied</label><br>
+            <input type="checkbox" name="saf6"><label for="saf6">Visite photographique</label><br>
+        </div>
+        </div>
+        <div id="dose">
+            <h6>votre e-mail <span id="star">*</span></h6>
+            <input type="email" id="in" name="mail" required>
+            <h6>votre pays <span id="star">*</span></h6>
+            <input type="text" id="in" name="pays" required>
+            <h6>Date de depart <span id="star">*</span></h6>
+            <input type="date" name="date" required>
+            <h6>Premiere fois en afrique?</h6>
+            <input type="checkbox" name="afr1"><label for="afr1">oui</label><br>
+            <input type="checkbox" name="afr2"><label for="afr2">Non</label><br>
+            <h6>nombre d'enfats (moins de 12 ans)</h6>
+            <input type="text" id="in" name="nbre_enfants">
+            <h6>plan de trekking en montagne</h6>
+            <div id="notre">
+            <input type="checkbox" name="plan1" id=""><label for="plan1">Trekking au mont Kilimandjaro</label><br>
+            <input type="checkbox" name="plan2" id=""><label for="plan2">Escale du mont Meru</label><br>
+            <input type="checkbox" name="plan3" id=""><label for="plan3">Escale Oldonyo-Legai</label><br>
+            <input type="checkbox" name="plan4" id=""><label for="plan4">Trekking dans les hauts plateaux du Ngorongoro</label><br>
+        </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+        <div id="sub">
+            <input type="submit" value="Submit" id="puton">
+        </div>
+        <br>
+    <br>
+    <br>
+    </form>
+</body>
+</html>
